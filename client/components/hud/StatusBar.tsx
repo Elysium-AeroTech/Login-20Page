@@ -7,7 +7,7 @@ export default function StatusBar() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Satellite className="size-5 text-[hsl(var(--hud-cyan))]" />
-          <span className="font-display tracking-widest text-sm text-[hsl(var(--hud-cyan))]">AEGIS LAUNCH NETWORK</span>
+          <span className="font-display tracking-widest text-sm text-[hsl(var(--hud-cyan))]">ELYSUIM COMMAND NETWORK</span>
           <span className="ml-3 text-xs text-muted-foreground">NODE LC-04</span>
         </div>
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
