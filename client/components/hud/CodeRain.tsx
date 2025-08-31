@@ -1,6 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
-export default function CodeRain({ className = "", density = 14 }: { className?: string; density?: number }) {
+export default function CodeRain({
+  className = "",
+  density = 14,
+}: {
+  className?: string;
+  density?: number;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
@@ -30,7 +36,9 @@ export default function CodeRain({ className = "", density = 14 }: { className?:
     const alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&".split("");
     const columnWidth = density;
     const columns = Math.ceil(width / columnWidth);
-    const drops = new Array(columns).fill(0).map(() => Math.floor(Math.random() * -50));
+    const drops = new Array(columns)
+      .fill(0)
+      .map(() => Math.floor(Math.random() * -50));
 
     const bgFade = () => {
       ctx.fillStyle = "rgba(0,0,0,0.08)";
@@ -49,7 +57,8 @@ export default function CodeRain({ className = "", density = 14 }: { className?:
         ctx.shadowBlur = 8;
         ctx.fillText(char, x, y);
         drops[i]++;
-        if (y > height && Math.random() > 0.975) drops[i] = Math.floor(Math.random() * -30);
+        if (y > height && Math.random() > 0.975)
+          drops[i] = Math.floor(Math.random() * -30);
       }
       rafRef.current = requestAnimationFrame(draw);
     };
