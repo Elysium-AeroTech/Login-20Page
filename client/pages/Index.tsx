@@ -34,7 +34,10 @@ export default function Index() {
 
             <form onSubmit={onSubmit} className="mt-8 space-y-5">
               <div className="grid gap-2">
-                <Label htmlFor="operator" className="tracking-wide text-xs text-muted-foreground">
+                <Label
+                  htmlFor="operator"
+                  className="tracking-wide text-xs text-muted-foreground"
+                >
                   OFFICIAL ID
                 </Label>
                 <Input
@@ -46,7 +49,10 @@ export default function Index() {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="key" className="tracking-wide text-xs text-muted-foreground">
+                <Label
+                  htmlFor="key"
+                  className="tracking-wide text-xs text-muted-foreground"
+                >
                   SECURITY PHRASE
                 </Label>
                 <div className="relative">
@@ -62,7 +68,10 @@ export default function Index() {
               </div>
 
               <div className="grid gap-2">
-                <Label htmlFor="otp" className="tracking-wide text-xs text-muted-foreground">
+                <Label
+                  htmlFor="otp"
+                  className="tracking-wide text-xs text-muted-foreground"
+                >
                   CLEARANCE CODE
                 </Label>
                 <Input
@@ -90,7 +99,11 @@ export default function Index() {
                 <div className="absolute inset-y-0 -left-full w-1/2 bg-gradient-to-r from-transparent via-[rgba(0,255,170,0.15)] to-transparent animate-sweep" />
                 <div className="p-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {[
-                    { k: "ALERT", v: "GREEN", c: "text-[hsl(var(--hud-green))]" },
+                    {
+                      k: "ALERT",
+                      v: "GREEN",
+                      c: "text-[hsl(var(--hud-green))]",
+                    },
                     { k: "SECTOR", v: "LC-04" },
                     { k: "PROTOCOL", v: "OMEGA" },
                     { k: "HANDSHAKE", v: "TLS1.3" },
@@ -99,7 +112,11 @@ export default function Index() {
                   ].map((it) => (
                     <div key={it.k} className="text-xs">
                       <div className="text-muted-foreground">{it.k}</div>
-                      <div className={`font-mono tracking-widest ${it.c ?? ""}`}>{it.v}</div>
+                      <div
+                        className={`font-mono tracking-widest ${it.c ?? ""}`}
+                      >
+                        {it.v}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -123,7 +140,10 @@ export default function Index() {
               </div>
 
               <div className="pt-3">
-                <Button asChild className="h-11 w-full border border-hud-grid bg-transparent text-[hsl(var(--hud-cyan))] hover:bg-[hsl(var(--hud-cyan))]/10 tracking-widest">
+                <Button
+                  asChild
+                  className="h-11 w-full border border-hud-grid bg-transparent text-[hsl(var(--hud-cyan))] hover:bg-[hsl(var(--hud-cyan))]/10 tracking-widest"
+                >
                   <a href="/dashboard">SECONDARY AUTH — DASHBOARD</a>
                 </Button>
               </div>
@@ -133,8 +153,13 @@ export default function Index() {
           <aside className="order-1 lg:order-2">
             <div className="relative rounded-lg border border-hud-grid bg-black/30 overflow-hidden">
               <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between px-4 py-2 text-xs text-muted-foreground/80 border-b border-hud-grid bg-black/40 backdrop-blur">
-                <span className="font-display tracking-widest text-[hsl(var(--hud-cyan))]">REALTIME CIPHER STREAM</span>
-                <span className="inline-flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-[hsl(var(--hud-green))] animate-pulse"/> LIVE</span>
+                <span className="font-display tracking-widest text-[hsl(var(--hud-cyan))]">
+                  REALTIME CIPHER STREAM
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="h-2 w-2 rounded-full bg-[hsl(var(--hud-green))] animate-pulse" />{" "}
+                  LIVE
+                </span>
               </div>
               <div className="h-[360px] sm:h-[420px]">
                 <CodeRain className="w-full h-full" density={14} />
@@ -142,7 +167,9 @@ export default function Index() {
             </div>
             <div className="mt-6 grid grid-cols-2 gap-4 text-xs text-muted-foreground">
               <div className="rounded-lg border border-hud-grid bg-black/30 p-4">
-                <div className="font-display tracking-widest text-[hsl(var(--hud-cyan))] text-sm">SYSTEM DIAGNOSTICS</div>
+                <div className="font-display tracking-widest text-[hsl(var(--hud-cyan))] text-sm">
+                  SYSTEM DIAGNOSTICS
+                </div>
                 <ul className="mt-2 space-y-1 font-mono">
                   <li>• Thrusters: STANDBY</li>
                   <li>• Guidance: OK</li>
@@ -150,7 +177,9 @@ export default function Index() {
                 </ul>
               </div>
               <div className="rounded-lg border border-hud-grid bg-black/30 p-4">
-                <div className="font-display tracking-widest text-[hsl(var(--hud-cyan))] text-sm">NETWORK STATUS</div>
+                <div className="font-display tracking-widest text-[hsl(var(--hud-cyan))] text-sm">
+                  NETWORK STATUS
+                </div>
                 <ul className="mt-2 space-y-1 font-mono">
                   <li>• Uplink: STABLE</li>
                   <li>• Latency: 12ms</li>

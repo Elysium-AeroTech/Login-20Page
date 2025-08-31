@@ -18,7 +18,9 @@ export default function Dashboard() {
 
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="rounded-lg border border-hud-grid bg-black/30 p-4 backdrop-blur">
-            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">SYSTEM HEALTH</div>
+            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">
+              SYSTEM HEALTH
+            </div>
             <ul className="mt-3 space-y-1 font-mono text-sm text-muted-foreground">
               <li>CPU: 23%</li>
               <li>Memory: 41%</li>
@@ -27,7 +29,9 @@ export default function Dashboard() {
           </div>
 
           <div className="rounded-lg border border-hud-grid bg-black/30 p-4 backdrop-blur">
-            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">COMMUNICATIONS</div>
+            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">
+              COMMUNICATIONS
+            </div>
             <ul className="mt-3 space-y-1 font-mono text-sm text-muted-foreground">
               <li>Uplink: STABLE</li>
               <li>Latency: 11.8ms</li>
@@ -36,7 +40,9 @@ export default function Dashboard() {
           </div>
 
           <div className="rounded-lg border border-hud-grid bg-black/30 p-4 backdrop-blur">
-            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">SECURITY</div>
+            <div className="text-sm font-display tracking-widest text-[hsl(var(--hud-cyan))]">
+              SECURITY
+            </div>
             <ul className="mt-3 space-y-1 font-mono text-sm text-muted-foreground">
               <li>Access: HIGHEST OFFICIAL</li>
               <li>Encryption: AES-256</li>
