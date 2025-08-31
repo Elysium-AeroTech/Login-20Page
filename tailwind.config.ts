@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Orbitron", "Inter", "ui-sans-serif", "system-ui"],
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,6 +61,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        hud: {
+          green: "hsl(var(--hud-green))",
+          cyan: "hsl(var(--hud-cyan))",
+          amber: "hsl(var(--hud-amber))",
+          red: "hsl(var(--hud-red))",
+          grid: "hsl(var(--hud-grid))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +76,37 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "radar-sweep": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
+        "pulse-glow": {
+          "0%, 100%": { filter: "drop-shadow(0 0 0 rgba(0,0,0,0))" },
+          "50%": { filter: "drop-shadow(0 0 12px rgba(0, 255, 170, 0.6))" },
+        },
+        scanlines: {
+          from: { backgroundPositionY: "0" },
+          to: { backgroundPositionY: "100%" },
+        },
+        sweep: {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(100%)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "radar-sweep": "radar-sweep 8s linear infinite",
+        "pulse-glow": "pulse-glow 2.4s ease-in-out infinite",
+        scanlines: "scanlines 6s linear infinite",
+        sweep: "sweep 3s linear infinite",
       },
     },
   },
