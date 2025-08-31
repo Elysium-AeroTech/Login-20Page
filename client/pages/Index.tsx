@@ -121,6 +121,12 @@ export default function Index() {
                   <AlertTriangle className="mr-2" /> LOCKDOWN
                 </Button>
               </div>
+
+              <div className="pt-3">
+                <Button asChild className="h-11 w-full border border-hud-grid bg-transparent text-[hsl(var(--hud-cyan))] hover:bg-[hsl(var(--hud-cyan))]/10 tracking-widest">
+                  <a href="/dashboard">SECONDARY AUTH — DASHBOARD</a>
+                </Button>
+              </div>
             </form>
           </section>
 
